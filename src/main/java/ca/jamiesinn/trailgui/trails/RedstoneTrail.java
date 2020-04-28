@@ -14,7 +14,11 @@ public class RedstoneTrail extends Trail
         super(config);
         Color color = config.getColor("dustColor", Color.RED);
         float size = (float) config.getDouble("dustSize", 1);
-        dustOptions = new Particle.DustOptions(color, size);
+        if (color != null) {
+            dustOptions = new Particle.DustOptions(color, size);
+        } else {
+            dustOptions = new Particle.DustOptions(Color.RED, size);
+        }
         loadType(config.getString("type"));
     }
 
