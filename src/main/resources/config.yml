@@ -64,6 +64,10 @@ GUI:
   removeTrailMessage: "&8[&CTrailGUI&8] &ARemoved the &L%TrailName% &Atrail."
   #The item display name for no permissions.
   noPermMessage: "&4No Permissions"
+  noPermLore:
+    - "&7Deze trail is niet beschikbaar"
+    - "&7voor je rank. Upgrade je rank op"
+    - "&ahappymine.nl/shop"
 
 ############################################################
 # +------------------------------------------------------+ #

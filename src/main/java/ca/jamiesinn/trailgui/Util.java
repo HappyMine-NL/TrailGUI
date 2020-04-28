@@ -197,6 +197,14 @@ public class Util
         ItemStack i = new ItemStack(Material.RED_STAINED_GLASS_PANE, 1);
         ItemMeta meta = i.getItemMeta();
         meta.setDisplayName(TrailGUI.getPlugin().getConfig().getString("GUI.noPermMessage").replaceAll("&", "\u00A7"));
+
+        List<String> lore = new ArrayList<>();
+        for (String s : TrailGUI.getPlugin().getConfig().getStringList("GUI.noPermLore"))
+        {
+            lore.add(ChatColor.translateAlternateColorCodes('&', s));
+        }
+
+        meta.setLore(lore);
         i.setItemMeta(meta);
         return i;
 
